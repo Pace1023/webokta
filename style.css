@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;600;700&family=Lato:wght@300&family=Patrick+Hand&family=Poppins:wght@100;200;300;400;500;600&family=Quicksand:wght@400;500;600&family=Sacramento&family=Water+Brush&display=swap');
+
+:root{
+    --bloodred: #660000;
+    --darkred: #8b0000;
+    --yellow: #ffcc0d;
+    --crimson: #dc143c;
+    --white: #ffffff;
+    --border-bold: .5rem solid var(--black);
+    --border-bold: .2rem solid var(--black)
+}
+*{
+    font-family: 'Patrick Hand', cursive;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--bloodred);
+}
+*::selection{
+    background-color: var(--bloodred);
+    color: var(--white);
+}
+*::-webkit-scrollbar{
+    height: .5rem;
+    width: 1rem;
+}
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: var(--crimson);
+}
+
+html{
+    font-size: 68.0%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    overflow: hidden;
+    transition: .2s linear !important;
+}
+body.active{
+    padding-left: -35rem;
+}
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.heading{
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.heading span{
+    text-transform: uppercase;
+    font-size: 6.5rem;
+    border-bottom: .5rem solid #dc143c;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    cursor: pointer;
+    padding: .7rem;
+    border: .4rem solid #ffcc0d;
+    border-radius: 1rem;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background-color: var(--yellow);
+}
+
+.header{
+    position: fixed;
+    top: 0; left: -35rem;
+    height: 100vh;
+    border-right: 1rem solid var(--yellow);
+    background-color: var(--white);
+    width: 35rem;
+    padding: 3rem 2rem;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: column;
+    text-align: center;
+}
+.header .logo{
+    text-transform: uppercase;
+    border-bottom: .3rem solid #660000;
+    font-weight: bolder;
+    font-size: 3.5rem;
+}
+.header .navbar{
+    width: 100%;
+}
+.header .navbar a{
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+.header .navbar a.active,
+.header .navbar a:hover{
+    background-color: #dc143c;
+}
+.header .follow a{
+    font-size: 3rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: .6s linear !important;
+}
+.header .follow a:hover{
+    transform: rotate(360deg);
+}
+
+#menu-btn{
+    position: absolute;
+    top: 0; right: -5.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    width: 5rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: #ffcc0d;
+    color: #660000;
+}
+.header.active{
+    left: 0;
+}
+
+.home{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: 100vh;
+}
+.home .image{
+    flex: 1 1 40rem;
+}
+.home .image img{
+    height: 50rem;
+    padding: 2rem;
+    border: .5rem solid #dc143c;
+}
+.home .content{
+    flex: 1 1 40rem;
+}
+.home .content h3{
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+.home .content span{
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #dc143c;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+.home .content p{
+    font-size: 1.7rem;
+    line-height: 1.5;
+    padding: 1rem 0;
+}
+.about .biography p{
+    margin: 2rem auto;
+    max-width: 70rem;
+    line-height: 1.5;
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+.about .biography .bio{
+    margin-top: 1rem 0;
+}
+.about .biography .bio h3 span{
+    font-weight: lighter;
+}
+.about .biography .bio h3{
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin: 1.5rem;
+    border:.3rem solid var(--crimson);
+    word-break: break-all;
+    font-size: 2rem;
+    text-transform: none;
+    font-weight: normal;
+}
+
+.about .skill{
+    margin: 3rem 0;
+}
+.about .skill .progress {
+    margin-top: 1rem;
+}
+.about .skill .progress .bar{
+    margin: 1rem auto;
+    max-width: 70rem;
+    border: .3rem solid #dc143c;
+    padding: 1rem;
+}
+.about .skill .progress .bar h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--yellow);
+    font-size: 2rem;
+}
+
+.about .skill .progress .bar:nth-child(1) h3{
+    width: 85%;
+}
+.about .skill .progress .bar:nth-child(2) h3{
+    width: 65%;
+}
+.about .skill .progress .bar:nth-child(3) h3{
+    width: 40%;
+}
+.about .skill .progress .bar:nth-child(4) h3{
+    width: 30%;
+}
+.about .skill .progress .bar:nth-child(5) h3{
+    width: 70%;
+}
+.about .skill .progress .bar:nth-child(6) h3{
+    width: 50%;
+}
+
+.about .edu-exp .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+.about .edu-exp .row .box-container .tittle{
+    padding: 1rem;
+    font-size: 3rem;
+    background-color: #ffcc0d;
+}
+.about .edu-exp .row .box-container{
+    flex: 1 1 40rem;
+}
+.about .edu-exp .row .box-container .box{
+    text-align: left;
+    margin: 1rem 0;
+    padding: 2rem;
+    background-color: #f1eded;
+}
+.about .edu-exp .row .box-container .box span{
+    font-size: 1.3rem;
+}
+.about .edu-exp .row .box-container .box h3{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.about .edu-exp .row .box-container .box p{
+    font-size: 1.8rem;
+}
+
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.services .box-container .box{
+    padding: 3rem 2rem;
+    border: .3rem solid #dc143c;
+}
+.services .box-container .box i{
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+.services .box-container .box h3{
+    margin: 1rem 0;
+    font-size: 3rem;
+    padding: 1rem;
+    background-color: #ffcc0d;
+}
+.services .box-container .box p{
+    line-height: 1;
+    font-size: 2rem;
+}
+.services .box-container .box:hover{
+    background-color: #dc143c;
+}
+.services .box-container .box:hover i{
+    color: #ffffff;
+}
+.services .box-container .box:hover p{
+    color: #ffffff;
+}
+
+
+
+.portfolio .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+.portfolio .box-container img{
+    height: 40rem;
+    width: 100%;
+    object-fit: cover;
+}
+.portfolio .box-container .box h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+.portfolio .box-container .box span{
+    font-size: 2rem;
+}
+.portfolio .box-container:hover .box {
+    opacity: .2;
+}
+.portfolio .box-container .box:hover {
+    opacity: 1;
+}
+.contact form{
+    max-width: 70rem;
+    margin: 0 auto;
+}
+.contact form .box{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 2rem;
+    text-transform: none;
+    border: .3rem solid #d8d1d1;
+    margin: 1rem 0;
+}
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+}
+.contact form .flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.contact form .flex .box{
+    width: 49%;
+}
+.credit{
+    text-align: center;
+    background-color: var(--bloodred);
+    padding: 3rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+.credit span{
+    color: var(--yellow);
+    font-weight: normal;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+/* media queries */
+
+
+
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    body.active{
+        padding-left: 0;
+    }
+
+}
+@media (max-width:450px){
+
+    html{
+        font-size: 35%;
+    }
+    .header.active{
+        padding-top: 5rem;
+    }
+    #menu-btn.fa-times{
+        right: 0;
+    }
+    .home .image img{
+        height: auto;
+        width: 100%;
+        border: .4rem solid #dc143c;
+    }
+    .heading span{
+        font-size: 4rem;
+    }
+    .about .biography .bio h3{
+        font-size: 2rem;
+    }
+    .contact form .flex .box{
+        width: 100%;
+    }
+
+}
